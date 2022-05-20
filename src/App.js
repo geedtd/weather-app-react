@@ -38,14 +38,22 @@ function App() {
             <p>Dallas</p>
           </div>
           <div className="temp">
-          <h1>65 Fahrenheit</h1>            
+          <h1>65º Fahrenheit</h1>            
           </div>
           <div className="description">
             <p>Overcast</p>
           </div>
         </div>
         <div className="bottom">
-
+          <div className="feels">
+            <p>65º</p>
+          </div>
+          <div className="humidity">
+            <p>20%</p>
+          </div>
+          <div className="wind">
+            <p>12 MPH</p>
+          </div>
         </div>
 
       </div>
