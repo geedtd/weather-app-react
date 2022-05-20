@@ -45,20 +45,26 @@ function App() {
             {data.weather ? <p>{data.weather[0].main}</p> : null}
           </div>
         </div>
-        <div className="bottom">
-          <div className="feels">
-          {data.main ? <p>{data.main.feels_like}º</p> : null}
-            <p>Feels Like</p>
+        {data.name ? 
+          <div className="bottom">
+            <div className="feels">
+            {data.main ? <p>{data.main.feels_like}º</p> : null}
+              <p>Feels Like</p>
+            </div>
+            <div className="humidity">
+            {data.main ? <p className='bold'>{data.main.humidity}%</p> : null}
+              <p>Humidity</p>
+            </div>
+            <div className="wind">
+            {data.wind ? <p className='bold'>{data.wind.speed}MPH</p> : null}
+              <p>Wind Speed</p>
+            </div>
           </div>
-          <div className="humidity">
-          {data.main ? <p className='bold'>{data.main.humidity}%</p> : null}
-            <p>Humidity</p>
+          :
+          <div className="bottom">
+            <h2>Enter a City Above To Get Information</h2>
           </div>
-          <div className="wind">
-            <p className='bold'>12 MPH</p>
-            <p>Wind Speed</p>
-          </div>
-        </div>
+        }
 
       </div>
     </div>
